@@ -1,0 +1,26 @@
+{
+  "name": "vue-cli-plugin-cordova",
+  "version": "0.0.1",
+  "description": "vue-cli 3.x plugin for Apache Cordova",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dekimasoon/vue-cli-plugin-cordova.git"
+  },
+  "keywords": [
+    "cordova"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dekimasoon/vue-cli-plugin-cordova/issues"
+  },
+  "homepage": "https://github.com/dekimasoon/vue-cli-plugin-cordova#readme",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-plugin-vue-libs": "^2.1.0"
+  }
+}
