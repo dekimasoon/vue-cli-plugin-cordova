@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>redirect</title>
+  </head>
+  <body>
+    <script src="cordova.js"></script>
+    <script>
+      document.addEventListener('deviceready', function() {
+        var lanIp = '<%- lanIp %>'
+        var protocol = '<%- https ? "https" : "http" %>'
+        var port = '<%- port %>'
+        var redirectTo = protocol + '://' + getRedirectIp(lanIp) + ':' + port + '/?_cp=' + device.platform
+        window.location.href = redirectTo
+      })
+      function getRedirectIp (lanIp) {
+        if (device.platform === 'Android' && device.isVirtual) {
+          return '10.0.2.2'
+        }
+        return lanIp;
+      }
+    </script>
+  </body>
+</html>
