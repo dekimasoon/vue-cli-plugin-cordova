@@ -21,5 +21,5 @@ function getCordovaUrl() {
     const split = kv.split('=');
     return split[0] === '_cp' ? split[1] : p;
   }, '');
-  return platform ? `cordova/${platform}/www/cordova.js` : 'cordova.js';
+  return platform ? `cordova/${platform}/platform_www/cordova.js` : 'cordova.js';
 }

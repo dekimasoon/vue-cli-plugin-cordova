@@ -11,7 +11,8 @@
         var lanIp = '<%- lanIp %>'
         var protocol = '<%- https ? "https" : "http" %>'
         var port = '<%- port %>'
-        var redirectTo = protocol + '://' + getRedirectIp(lanIp) + ':' + port + '/?_cp=' + device.platform
+        var platform = device.platform.toLowerCase()
+        var redirectTo = protocol + '://' + getRedirectIp(lanIp) + ':' + port + '/?_cp=' + platform
         window.location.href = redirectTo
       })
       function getRedirectIp (lanIp) {
