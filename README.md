@@ -7,10 +7,10 @@ Easely and simply integrate Corodva into your Vue app with:
 - Hot reloading on iOS/Android simulators and real devices.
 - Follow industry best practices as much as possible.
 
-### Status: beta
+## Status: beta
 Under development. Check out TODO what is not implemented yet.
 
-### Quickstart
+## Quickstart
 You need to [set up the cordova development environment](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) beforehand.
 
 ```sh
@@ -22,10 +22,10 @@ $ cordova platform add ios  # or android
 $ cordova run ios           # enjoy hot reloading
 ```
 
-### If hot reloading now working
-Make sure that your development PC and the test devices are connected to the same LAN, and also there is no firewall blocking access from the test devices to the PC.
+## If hot reloading now working
+Make sure that your development PC and the test devices are connected to the same LAN, and also there is no firewall blocking access from the test devices to the PC.
 
-### TODO
+## TODO
 - Support `browser` platform
 - Set the Wkwebview default for iOS
 - Provide CSS for iPhoneX layout problems
@@ -33,5 +33,5 @@ Make sure that your development PC and the test devices are connected to the sam
 - Better security settings or guiding
 - spec?
 
-### License
+## License
 MIT
