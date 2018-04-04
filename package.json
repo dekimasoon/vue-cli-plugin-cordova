@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-cordova",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.1",
   "description": "vue-cli 3.x plugin for Apache Cordova",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "keywords": [
     "cordova"
   ],
-  "author": "",
+  "author": "dekimasoon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dekimasoon/vue-cli-plugin-cordova/issues"
