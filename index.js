@@ -17,6 +17,7 @@ module.exports = (api, options) => {
     description: 'start development server for cordova',
     usage: 'vue-cli-service cordova-serve [options]',
     options: {
+      '--open': `open browser on server start`,
       '--host': `specify host (default: ${defaults.host})`,
       '--port': `specify port (default: ${defaults.port})`,
       '--https': `use https (default: ${defaults.https})`
@@ -26,7 +27,7 @@ module.exports = (api, options) => {
     portfinder.basePort = args.port || process.env.PORT || projectDevServerOptions.port || defaults.port
     return portfinder.getPortPromise().then(port => {
       const serveArgs = {
-        open: false,
+        open: args.open,
         mode: 'app',
         host: args.host || process.env.HOST || projectDevServerOptions.host || defaults.host,
         port,
