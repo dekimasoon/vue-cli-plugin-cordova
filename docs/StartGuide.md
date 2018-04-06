@@ -15,6 +15,7 @@ And you need to [set up the cordova development environment](https://cordova.apa
 #### Start development
 ```sh
 $ npm run cordova-serve
+
 # in another tab
 $ cordova prepare
 $ open http://localhost:8080
@@ -24,7 +25,7 @@ $ open http://localhost:8080
 ```sh
 $ npm run corodva-build
 $ cordova build browser
-# The `platforms/browser/www` directory is ready to deployed.
+# The `platforms/browser/www` directory is ready to deployed.
 ``` 
 
 ## iOS / Android Platform
@@ -32,6 +33,7 @@ $ cordova build browser
 #### Start development
 ```sh
 $ npm run cordova-serve
+
 # in another tab
 $ cordova platform add ios   # or android
 $ cordova run ios            # or android
