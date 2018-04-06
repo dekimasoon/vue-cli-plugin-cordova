@@ -1,7 +1,7 @@
 module.exports = (api, options, rootOptions) => {
   api.extendPackage({
     scripts: {
-      'cordova-serve': 'vue-cli-service cordova-serve --open',
+      'cordova-serve': 'vue-cli-service cordova-serve',
       'cordova-build': 'vue-cli-service build --dest www'
     },
     dependencies: {
