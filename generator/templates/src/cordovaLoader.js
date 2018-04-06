@@ -15,11 +15,11 @@ function appendCordovaScript() {
 }
 
 function getCordovaUrl() {
-  // ?_cp=ios
   const params = window.location.search.substr(1).split('&');
+  // default platform is browser
   const platform = params.reduce((p, kv) => {
     const split = kv.split('=');
     return split[0] === '_cp' ? split[1] : p;
-  }, '');
-  return platform ? `cordova/${platform}/platform_www/cordova.js` : 'cordova.js';
+  }) || 'browser'; 
+  return `cordova/${platform}/platform_www/cordova.js`;
 }

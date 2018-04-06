@@ -5,6 +5,7 @@ module.exports = (api, options, rootOptions) => {
       'cordova-build': 'vue-cli-service build --dest www'
     },
     dependencies: {
+      'cordova-browser': '^5.0.3',
       'cordova-plugin-whitelist': '^1.3.3',
       'cordova-plugin-device': '^2.0.1'
     },
@@ -12,7 +13,10 @@ module.exports = (api, options, rootOptions) => {
       plugins: {
         'cordova-plugin-whitelist': {},
         'cordova-plugin-device': {}
-      }
+      },
+      platforms: [
+        'browser'
+      ]
     }
   })
 
