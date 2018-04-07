@@ -4,8 +4,7 @@
 $ npm i @vue/cli -g
 $ vue create my-project    
 $ cd my-project 
-$ npm i dekimasoon/vue-cli-plugin-cordova  # publish to npm soon
-$ vue invoke vue-cli-plugin-cordova
+$ vue add cordova
 ```
 
 And you need to [set up the cordova development environment](https://cordova.apache.org/docs/en/latest/guide/cli/index.html).

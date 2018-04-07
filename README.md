@@ -14,9 +14,11 @@ Under development. Check out TODO what is not implemented yet.
 Please see [start guide](https://github.com/dekimasoon/vue-cli-plugin-cordova/blob/master/docs/StartGuide.md).
 
 ```sh
-$ npm i dekimasoon/vue-cli-plugin-cordova  # publish to npm soon
-$ vue invoke vue-cli-plugin-cordova
-$ npm run cordova-serve
+$ vue add cordova
+
+# in another tab
+$ cordova prepare
+$ open http://localhost:8080
 ```
 
 ## If hot reloading not working
