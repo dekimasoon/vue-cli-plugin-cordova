@@ -1,23 +1,21 @@
 ## Setup for all platforms
 
-```sh
-$ npm i @vue/cli -g
-$ vue create my-project    
-$ cd my-project 
-$ vue add cordova
-```
+You need to [set up the cordova development environment](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) beforehand.
 
-And you need to [set up the cordova development environment](https://cordova.apache.org/docs/en/latest/guide/cli/index.html).
+```sh
+$ vue create my-project   # create your vue project. install @vue/cli if you haven't.
+$ cd my-project
+$ vue add cordova         # add vue-cli-pugin-cordova and invoke it
+$ npm run cordova-build   # make sure you can build your project 
+$ cordova prepare         # prepare cordova resources
+```
 
 ## Browser Platform
 
 #### Start development
 ```sh
 $ npm run cordova-serve
-
-# in another tab
-$ cordova prepare
-$ open http://localhost:8080
+# open http://localhost:8080
 ```
 
 #### Production Build
@@ -31,10 +29,10 @@ $ cordova build browser
 
 #### Start development
 ```sh
+$ cordova platform add ios   # or android
 $ npm run cordova-serve
 
 # in another tab
-$ cordova platform add ios   # or android
 $ cordova run ios            # or android
 ```
 
