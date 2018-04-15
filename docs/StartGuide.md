@@ -25,19 +25,35 @@ $ cordova build browser
 # The `platforms/browser/www` directory is ready to deployed.
 ``` 
 
-## iOS / Android Platform
+## iOS Platform
+- Your app runs on the WKWebview. This feature is provided by [cordova-plugin-ionic-webview](https://github.com/ionic-team/cordova-plugin-ionic-webview).
 
 #### Start development
 ```sh
-$ cordova platform add ios   # or android
 $ npm run cordova-serve
 
 # in another tab
-$ cordova run ios            # or android
+$ cordova run ios
 ```
 
 #### Production Build
 ```sh
 $ npm run corodva-build
-$ cordova build ios          # or android
+$ cordova build ios
+```
+
+## Android Platform
+
+#### Start development
+```sh
+$ npm run cordova-serve
+
+# in another tab
+$ cordova run android
+```
+
+#### Production Build
+```sh
+$ npm run corodva-build
+$ cordova build android
 ```

@@ -8,7 +8,7 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access allows-local-networking="true" origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -23,8 +23,13 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <!-- INFO: If you want to prevent scrolling, set false -->
+        <preference name="ScrollEnabled" value="true" />
     </platform>
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^2.0.1" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <engine name="android" spec="^7.1.0" />
     <engine name="browser" spec="^5.0.3" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
