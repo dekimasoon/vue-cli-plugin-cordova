@@ -15,6 +15,8 @@ Please see [start guide](https://github.com/dekimasoon/vue-cli-plugin-cordova/bl
 
 ```sh
 $ vue add cordova
+$ npm run cordova-build
+$ cordova prepare
 $ npm run cordova-serve
 
 # in another tab
