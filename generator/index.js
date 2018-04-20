@@ -10,12 +10,15 @@ module.exports = (api, options, rootOptions) => {
       'cordova-ios': '^4.5.4',
       'cordova-plugin-device': '^2.0.1',
       'cordova-plugin-ionic-webview': '^1.2.0',
-      'cordova-plugin-whitelist': '^1.3.3'
+      'cordova-plugin-splashscreen': '^5.0.2',
+      'cordova-plugin-whitelist': '^1.3.3',
+      'vuetify': '^1.0.14'
     },
     cordova: {
       plugins: {
         'cordova-plugin-device': {},
         'cordova-plugin-ionic-webview': {},
+        'cordova-plugin-splashscreen': {},
         'cordova-plugin-whitelist': {}
       },
       platforms: [
