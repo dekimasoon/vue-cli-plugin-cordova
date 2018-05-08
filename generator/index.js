@@ -13,6 +13,8 @@ module.exports = (api, options, rootOptions) => {
       'cordova-plugin-splashscreen': '^5.0.2',
       'cordova-plugin-statusbar': '^2.4.2',
       'cordova-plugin-whitelist': '^1.3.3',
+      'material-design-icons': '^3.0.1',
+      'typeface-roboto': '0.0.54',
       'vuetify': '^1.0.14'
     },
     cordova: {
@@ -52,15 +54,23 @@ module.exports = (api, options, rootOptions) => {
     const main = files[mainFile]
     if (main) {
       const lines = main.split(/\r?\n/g).reverse()
+      const topIndex = lines.length - 1
+      lines[topIndex] =
+        `import 'typeface-roboto';\n` +
+        `import 'material-design-icons/iconfont/material-icons.css';\n` +
+        `import 'vuetify/dist/vuetify.css';\n` +
+        lines[topIndex]
       const lastImportIndex = lines.findIndex(line => line.match(/^import/))
-      lines[lastImportIndex] += `\nimport cordovaLoader from './cordovaLoader';`
+      lines[lastImportIndex] +=
+        `\nimport cordovaLoader from './cordovaLoader';` +
+        `\nimport vuetify from 'vuetify';`
       const startAt = lines[0] === '' ? 1 : 0
       const declareVueIndex = lines.findIndex(line => line.match(/new Vue/))
       for (let i = startAt; i <= declareVueIndex; i++) {
         if (i === startAt) {
           lines[i] = `  ${lines[i]}\n});`
         } else if (i === declareVueIndex) {
-          lines[i] = `cordovaLoader(() => {\n  ${lines[i]}`
+          lines[i] = `Vue.use(vuetify);\n\ncordovaLoader(() => {\n  ${lines[i]}`
         } else {
           lines[i] = `  ${lines[i]}`
         }
