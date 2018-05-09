@@ -1,4 +1,6 @@
 module.exports = (api, options, rootOptions) => {
+  const fs = require('fs')
+
   api.extendPackage({
     scripts: {
       'cordova-serve': 'vue-cli-service cordova-serve',
@@ -33,9 +35,10 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
-  api.render('./templates', {
-    hasTS: api.hasPlugin('typescript')
-  })
+  const hasTS = api.hasPlugin('typescript')
+  const routerPath = api.resolve(`./src/router.${hasTS ? 'ts' : 'js'}`)
+  const hasRouter = fs.existsSync(routerPath)
+  api.render('./templates', { hasTS, hasRouter })
 
   api.postProcessFiles(files => {
     // index.html
@@ -87,7 +90,6 @@ module.exports = (api, options, rootOptions) => {
   })
 
   api.onCreateComplete(() => {
-    const fs = require('fs')
     const path = require('path')
 
     // .gitignore - not included in files on postProcessFiles
