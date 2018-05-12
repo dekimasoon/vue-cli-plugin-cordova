@@ -90,8 +90,6 @@ module.exports = (api, options, rootOptions) => {
   })
 
   api.onCreateComplete(() => {
-    const path = require('path')
-
     // .gitignore - not included in files on postProcessFiles
     const ignorePath = api.resolve('.gitignore')
     const ignore = fs.existsSync(ignorePath)
@@ -99,10 +97,9 @@ module.exports = (api, options, rootOptions) => {
       : ''
     fs.writeFileSync(ignorePath, ignore + '\n# Cordova\n/www\n/platforms\n/plugins\n')
 
-    // symlink to platforms
-    const from = path.relative(process.cwd(), api.resolve('./public/cordova'))
-    const to = api.resolve('./platforms')
-    fs.symlinkSync(to, from, 'dir')
+    // create symlinks
+    fs.symlinkSync('../platforms', './public/cordova', 'dir')
+    fs.symlinkSync('../platforms/browser/www/config.xml', './public/config.xml')
   })
 }
 
