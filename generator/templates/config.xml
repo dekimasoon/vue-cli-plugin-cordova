@@ -61,6 +61,9 @@
         <icon src="res/icon/ios/icon-small@2x.png" width="58" height="58" />
         <icon src="res/icon/ios/icon-1024.png" height="1024" width="1024" />
     </platform>
+    <platform name="browser">
+        <preference name="ShowSplashScreen" value="false" />
+    </platform>
     <plugin name="cordova-plugin-device" spec="^2.0.1" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
