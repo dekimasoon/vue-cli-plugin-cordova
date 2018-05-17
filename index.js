@@ -46,6 +46,7 @@ module.exports = (api, options) => {
       webpackConfig.plugin('copy')
         .tap(args => {
           args[0][0].ignore.push('cordova')
+          args[0][0].ignore.push('config.xml')
           return args
         })
       webpackConfig.plugin('cordova')
