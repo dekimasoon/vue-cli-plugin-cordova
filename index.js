@@ -28,7 +28,6 @@ module.exports = (api, options) => {
     return portfinder.getPortPromise().then(port => {
       const serveArgs = {
         open: args.open,
-        mode: 'app',
         host: args.host || process.env.HOST || projectDevServerOptions.host || defaults.host,
         port,
         https: args.https || projectDevServerOptions.https || defaults.https,
@@ -81,3 +80,6 @@ function copyRedirectHtml (args, distDirPath) {
   fs.writeFileSync(distPath, htmlStr)
 }
 
+module.exports.defaultModes = {
+  'cordova-serve': 'development'
+}
