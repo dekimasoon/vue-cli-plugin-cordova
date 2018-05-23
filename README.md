@@ -20,16 +20,13 @@ $ cordova prepare
 $ npm run cordova-serve
 
 # in another tab
-$ cordova prepare
-$ open http://localhost:8080
+$ cordova run android
 ```
 
 ## If hot reloading not working
 Make sure that your development PC and the test devices are connected to the same LAN, and also there is no firewall blocking access from the test devices to the PC.
 
 ## TODO
-- Set the Wkwebview default for iOS
-- Provide CSS for iPhoneX layout problems
 - Make sure unit and e2e tests working
 - Better security settings or guiding
 - spec?
