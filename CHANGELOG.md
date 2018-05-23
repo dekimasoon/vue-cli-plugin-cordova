@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.5"></a>
+# [1.0.0-beta.5](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2018-05-23)
+
+
+### Bug Fixes
+
+* compat with vue-cli 3.0.0beta.10 ([03198a7](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/03198a7))
+* disable splash screen for browser pf ([dc60114](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/dc60114))
+* lint error ([92f49c3](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/92f49c3))
+* make confix.xml symlink for the browser platfrom ([694fe41](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/694fe41))
+* make wkplugin port 3000 ([8b642bc](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/8b642bc))
+
+
+### Features
+
+* add new icons and splash screen images ([7d41650](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/7d41650))
+* add vuetifyed App.vue ([0f27326](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/0f27326))
+* install cordova-plugin-statusbar as default ([6cce5e9](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/6cce5e9))
+* modify invoke to load vuetify and icons ([188b250](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/188b250))
+* set to use the WKWebview for ios ([6f0808f](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/6f0808f))
+
+
+
 <a name="1.0.0-beta.4"></a>
 # [1.0.0-beta.4](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2018-04-07)
 
