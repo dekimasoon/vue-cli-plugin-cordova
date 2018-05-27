@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.6"></a>
+# [1.0.0-beta.6](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2018-05-27)
+
+
+### Bug Fixes
+
+* correctly load files specified in css ([a94bc30](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/a94bc30))
+* prevent cordova script duplicated load ([7ca27e0](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/7ca27e0))
+
+
+
 <a name="1.0.0-beta.5"></a>
 # [1.0.0-beta.5](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2018-05-23)
 
