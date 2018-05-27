@@ -1,13 +1,15 @@
 export default function loadCordova(cb<%- hasTS ? ': () => void' : '' %>) {
-  if (document.URL.indexOf('http') === 0) {
-    appendCordovaScript();
-  }
+  appendCordovaScript();
   document.addEventListener('deviceready', () => {
     cb();
   });
 }
 
 function appendCordovaScript() {
+  const hasAlready = document.URL.indexOf('http') !== 0 || window.hasOwnProperty('cordova');
+  if (hasAlready) {
+    return;
+  }
   const script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = getCordovaUrl();
