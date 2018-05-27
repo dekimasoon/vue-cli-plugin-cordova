@@ -11,7 +11,9 @@
     "url": "git+https://github.com/dekimasoon/vue-cli-plugin-cordova.git"
   },
   "keywords": [
-    "cordova"
+    "vue",
+    "cordova",
+    "vue-cli"
   ],
   "author": "dekimasoon",
   "license": "MIT",
