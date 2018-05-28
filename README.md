@@ -18,11 +18,11 @@ $ npm run cordova-build
 $ cordova prepare
 $ npm run cordova-serve
 
-Please see [start guide](https://github.com/dekimasoon/vue-cli-plugin-cordova/blob/master/docs/StartGuide.md) for more details.
-
 # in another tab
 $ cordova run android
 ```
+
+Please see [start guide](https://github.com/dekimasoon/vue-cli-plugin-cordova/blob/master/docs/StartGuide.md) for more details.
 
 ## If hot reloading not working
 Make sure that your development PC and the test devices are connected to the same LAN, and also there is no firewall blocking access from the test devices to the PC.
