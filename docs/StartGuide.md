@@ -5,7 +5,7 @@ You need to [set up the cordova development environment](https://cordova.apache.
 ```sh
 $ vue create my-project   # create your vue project. install @vue/cli if you haven't.
 $ cd my-project
-$ vue add cordova         # add vue-cli-pugin-cordova and invoke it
+$ vue add cordova         # add vue-cli-plugin-cordova and invoke it
 $ npm run cordova-build   # make sure you can build your project 
 $ cordova prepare         # prepare cordova resources
 ```
