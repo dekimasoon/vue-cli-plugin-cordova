@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.7"></a>
+# [1.0.0-beta.7](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2018-06-14)
+
+
+### Bug Fixes
+
+* add babel-polyfill to support old webviews ([afbac4d](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/afbac4d))
+* supports project without vue-router ([f66758d](https://github.com/dekimasoon/vue-cli-plugin-cordova/commit/f66758d))
+
+
+
 <a name="1.0.0-beta.6"></a>
 # [1.0.0-beta.6](https://github.com/dekimasoon/vue-cli-plugin-cordova/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2018-05-27)
 
