@@ -58,6 +58,11 @@ export default Vue.extend({
     <%_ } _%>
     },
   },
+  <%_ if (!hasRouter) { _%>
+  components: {
+    HelloWorld
+  },
+  <%_ } _%>
 });
 </script>
 

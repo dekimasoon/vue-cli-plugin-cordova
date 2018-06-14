@@ -63,7 +63,7 @@ module.exports = (api, options, rootOptions) => {
         `import 'typeface-roboto';\n` +
         `import 'material-design-icons/iconfont/material-icons.css';\n` +
         `import 'vuetify/dist/vuetify.css';\n` +
-        `import 'babel-polyfill';\n`
+        `import 'babel-polyfill';\n` +
         lines[topIndex]
       const lastImportIndex = lines.findIndex(line => line.match(/^import/))
       lines[lastImportIndex] +=
