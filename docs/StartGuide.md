@@ -10,6 +10,9 @@ $ npm run cordova-build   # make sure you can build your project
 $ cordova prepare         # prepare cordova resources
 ```
 
+NOTE: On Windows, admin authority requires to run `vue add cordova` command. 
+So that symlinks can be generated properly.
+
 ## Browser Platform
 
 #### Start development
