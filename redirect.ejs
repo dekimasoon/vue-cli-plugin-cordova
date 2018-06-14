@@ -5,6 +5,13 @@
     <title>redirect</title>
   </head>
   <body>
+    <p>... redirecting to dev server: <%- lanIp %>:<%- port %></p>
+    <p>
+      This screen only shown in development mode.<br>
+      If your app hangs up on this screen, please check the following.<br>
+      - The dev server is running properly with `cordova-serve` command.<br>
+      - Your development PC and the test devices are connected to the same LAN, and also there is no firewall blocking access from the test devices to the PC.
+    </p>
     <script src="cordova.js"></script>
     <script>
       document.addEventListener('deviceready', function() {

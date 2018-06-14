@@ -26,7 +26,11 @@
     </v-toolbar>
     <v-content>
       <v-container fluid>
+      <%_ if (hasRouter) { _%>
         <router-view></router-view>
+      <%_ } else { _%>
+        <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <%_ } _%>
       </v-container>
     </v-content>
   </v-app>
@@ -34,6 +38,10 @@
 
 <script<%- hasTS ? ' lang="ts"' : '' %>>
 import Vue from 'vue';
+<%_ if (!hasRouter) { _%>
+import HelloWorld from './components/HelloWorld.vue';
+<%_ } _%>
+
 export default Vue.extend({
   data() {
     return {
@@ -50,6 +58,11 @@ export default Vue.extend({
     <%_ } _%>
     },
   },
+  <%_ if (!hasRouter) { _%>
+  components: {
+    HelloWorld
+  },
+  <%_ } _%>
 });
 </script>
 

@@ -7,6 +7,7 @@ module.exports = (api, options, rootOptions) => {
       'cordova-build': 'vue-cli-service build --dest www'
     },
     dependencies: {
+      'babel-polyfill': '^6.26.0',
       'cordova-android': '^7.1.0',
       'cordova-browser': '^5.0.3',
       'cordova-ios': '^4.5.4',
@@ -62,6 +63,7 @@ module.exports = (api, options, rootOptions) => {
         `import 'typeface-roboto';\n` +
         `import 'material-design-icons/iconfont/material-icons.css';\n` +
         `import 'vuetify/dist/vuetify.css';\n` +
+        `import 'babel-polyfill';\n` +
         lines[topIndex]
       const lastImportIndex = lines.findIndex(line => line.match(/^import/))
       lines[lastImportIndex] +=
