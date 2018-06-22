@@ -1,13 +1,13 @@
 {
   "extends": ["plugin:vue-libs/recommended"],
+  "plugins": ["node"],
   "env": {
   },
   "globals": {
     "device": true
   },
   "rules": {
-    "indent": ["error", 2, { "MemberExpression": "off" }],
-    "vue-libs/no-async-functions": 2
+    "indent": ["error", 2, { "MemberExpression": "off" }]
   }
 }
 

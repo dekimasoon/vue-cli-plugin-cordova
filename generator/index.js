@@ -1,6 +1,7 @@
-module.exports = (api, options, rootOptions) => {
-  const fs = require('fs')
+module.exports = async (api, options, rootOptions) => {
 
+  await checkAdminRights()
+  
   api.extendPackage({
     scripts: {
       'cordova-serve': 'vue-cli-service cordova-serve',
@@ -36,6 +37,7 @@ module.exports = (api, options, rootOptions) => {
     }
   })
 
+  const fs = require('fs')
   const hasTS = api.hasPlugin('typescript')
   const routerPath = api.resolve(`./src/router.${hasTS ? 'ts' : 'js'}`)
   const hasRouter = fs.existsSync(routerPath)
@@ -105,3 +107,16 @@ module.exports = (api, options, rootOptions) => {
   })
 }
 
+function checkAdminRights () {
+  if (process.platform !== 'win32') {
+    return
+  }
+  const isAdmin = require('is-admin')()
+  if (!isAdmin) {
+    const msg = `
+      Admin rights is required to invoke vue-cli-plugin-cordova.
+      Please run your command prompt as an administrator and try again.
+    `
+    throw new Error(msg)
+  }
+}

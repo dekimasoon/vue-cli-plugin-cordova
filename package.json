@@ -27,6 +27,7 @@
     "cordova-plugin-device": "^2.0.1",
     "ejs": "^2.5.7",
     "html-webpack-include-assets-plugin": "^1.0.4",
+    "is-admin": "^2.1.1",
     "portfinder": "^1.0.13"
   },
   "devDependencies": {

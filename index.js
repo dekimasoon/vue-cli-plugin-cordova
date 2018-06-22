@@ -9,7 +9,7 @@ const defaults = {
   https: false
 }
 
-module.exports = (api, options) => {
+module.exports = async (api, options) => {
   const address = require('address')
   const portfinder = require('portfinder')
 
