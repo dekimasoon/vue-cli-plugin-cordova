@@ -13,7 +13,7 @@ Easely and simply integrate Corodva into your Vue app with:
 You need to [set up the cordova development environment](https://cordova.apache.org/docs/en/latest/guide/cli/index.html) beforehand.
 
 ```sh
-$ vue add cordova        # On Windows, you need to run this commands as administrator.
+$ vue add cordova        # On Windows, you need to run this command as administrator.
 $ npm run cordova-build
 $ cordova prepare
 $ npm run cordova-serve
