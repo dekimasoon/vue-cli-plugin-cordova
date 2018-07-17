@@ -23,7 +23,7 @@ $ npm run cordova-serve
 
 #### Production Build
 ```sh
-$ npm run corodva-build
+$ npm run cordova-build
 $ cordova build browser
 # The `platforms/browser/www` directory is ready to deployed.
 ``` 
@@ -41,7 +41,7 @@ $ cordova run ios
 
 #### Production Build
 ```sh
-$ npm run corodva-build
+$ npm run cordova-build
 $ cordova build ios
 ```
 
@@ -57,6 +57,6 @@ $ cordova run android
 
 #### Production Build
 ```sh
-$ npm run corodva-build
+$ npm run cordova-build
 $ cordova build android
 ```
