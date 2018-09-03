@@ -33,9 +33,8 @@ module.exports = (api, options) => {
         host: args.host || process.env.HOST || projectDevServerOptions.host || defaults.host,
         port,
         https: args.https || projectDevServerOptions.https || defaults.https,
-        lanIp: args["lan-ip"] || defaults.lanIp
+        lanIp: args['lan-ip'] || defaults.lanIp
       }
-      console.log(args);
       const wwwDirPath = api.resolve('www')
       info('your www/index.html is overwrited.')
       copyRedirectHtml(serveArgs, wwwDirPath)
