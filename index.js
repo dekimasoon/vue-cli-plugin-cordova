@@ -1,16 +1,17 @@
 const {
   info
 } = require('@vue/cli-shared-utils')
+const address = require('address')
 
 const defaults = {
   mode: 'development',
   host: '0.0.0.0',
   port: 8080,
-  https: false
+  https: false,
+  lanIp: address.ip()
 }
 
 module.exports = (api, options) => {
-  const address = require('address')
   const portfinder = require('portfinder')
 
   api.registerCommand('cordova-serve', {
@@ -20,7 +21,8 @@ module.exports = (api, options) => {
       '--open': `open browser on server start`,
       '--host': `specify host (default: ${defaults.host})`,
       '--port': `specify port (default: ${defaults.port})`,
-      '--https': `use https (default: ${defaults.https})`
+      '--https': `use https (default: ${defaults.https})`,
+      '--lan-ip': `IP of the machine running cordova-serve (default: ${defaults.lanIp})`
     }
   }, args => {
     const projectDevServerOptions = options.devServer || {}
@@ -31,8 +33,9 @@ module.exports = (api, options) => {
         host: args.host || process.env.HOST || projectDevServerOptions.host || defaults.host,
         port,
         https: args.https || projectDevServerOptions.https || defaults.https,
-        lanIp: address.ip()
+        lanIp: args["lan-ip"] || defaults.lanIp
       }
+      console.log(args);
       const wwwDirPath = api.resolve('www')
       info('your www/index.html is overwrited.')
       copyRedirectHtml(serveArgs, wwwDirPath)
