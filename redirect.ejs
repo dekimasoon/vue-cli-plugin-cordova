@@ -19,6 +19,11 @@
         var protocol = '<%- https ? "https" : "http" %>'
         var port = '<%- port %>'
         var platform = device.platform.toLowerCase()
+        if (platform === 'amazon-fireos') { // see https://github.com/dekimasoon/vue-cli-plugin-cordova/issues/29
+          // platform "amazon-fireos" seems to have disapear from Cordova docs, and can't be downloaded anymore.
+          // In order to avoid asking server for something that doesn't exist, "alias" "amazon-fireos" to simply "android"
+          platform = 'android'
+        }
         var redirectTo = protocol + '://' + getRedirectIp(lanIp) + ':' + port + '/?_cp=' + platform
         window.location.href = redirectTo
       })
