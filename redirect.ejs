@@ -19,6 +19,9 @@
         var protocol = '<%- https ? "https" : "http" %>'
         var port = '<%- port %>'
         var platform = device.platform.toLowerCase()
+        if(platform === 'amazon-fireos') {
+          platform = 'android'
+        }
         var redirectTo = protocol + '://' + getRedirectIp(lanIp) + ':' + port + '/?_cp=' + platform
         window.location.href = redirectTo
       })
