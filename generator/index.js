@@ -2,6 +2,9 @@ module.exports = (api, options, rootOptions) => {
   const fs = require('fs')
 
   api.extendPackage({
+    vue: {
+      baseUrl: ''
+    },
     scripts: {
       'cordova-serve': 'vue-cli-service cordova-serve',
       'cordova-build': 'vue-cli-service build --dest www'
