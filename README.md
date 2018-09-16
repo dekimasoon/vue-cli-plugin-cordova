@@ -1,5 +1,7 @@
+# DEPRECATED!
+This repository is deprecated. Please check @m0dch3n's [vue-cli-plugin-cordova](https://github.com/m0dch3n/vue-cli-plugin-cordova).
+
 # vue-cli-plugin-cordova
-[![NPM Version](https://img.shields.io/npm/v/vue-cli-plugin-cordova.svg)](https://www.npmjs.com/package/vue-cli-plugin-cordova)
 
 [Vue CLI 3.x](https://github.com/vuejs/vue-cli) plugin for Apache Cordova.  
 
